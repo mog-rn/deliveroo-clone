@@ -3,6 +3,7 @@ import {
   Image,
   SafeAreaView,
   SafeAreaViewComponent,
+  ScrollView,
   Text,
   TextInput,
   View,
@@ -15,6 +16,7 @@ import {
   SearchIcon,
   UserIcon,
 } from "react-native-heroicons/outline";
+import Categories from "../components/Categories";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -30,7 +32,7 @@ const HomeScreen = () => {
       className="flex-1 pt-8 bg-white"
     >
       {/* Header */}
-      <View className="flex-row pb-3 items-center mx-4 space-x-2 px-2">
+      <View className="flex-row pb-3 items-center mx-4 space-x-2 ">
         <Image
           source={{
             uri: "https://links.papareact.com/wru",
@@ -60,6 +62,16 @@ const HomeScreen = () => {
         </View>
         <AdjustmentsIcon color="#00CCBB" />
       </View>
+      {/* Body */}
+      <ScrollView className="bg-gray-100"
+        contentContainerStyle={{
+            paddingBottom: 100
+        }}
+      >
+        {/* Categories */}
+        <Categories />
+        {/* Featured View */}
+        </ScrollView>
     </SafeAreaView>
   );
 };
