@@ -43,10 +43,10 @@ const HomeScreen = () => {
         />
         <View className="flex-1">
           <Text className="font-bold text-gray-400 text-xs">Deliver now!</Text>
-          <Text className="font-bold text-xl items-center">
-            <Text>Current Location</Text>
+          <View className=" items-center flex-row">
+            <Text className="font-bold text-xl">Current Location</Text>
             <ChevronDownIcon size={20} color="#00CCBB" />
-          </Text>
+          </View>
         </View>
 
         <UserIcon color="#00CCBB" size={35} />
